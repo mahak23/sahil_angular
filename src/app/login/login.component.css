@@ -1,0 +1,117 @@
+.custm-container {
+  background-image: linear-gradient(to right, #f5f5f5 65%, #ffffff 35%);
+}
+.mainDP-container {
+  width: 60%;
+}
+.form-container {
+  width: 40%;
+}
+.lsf-form {
+  height: calc(100vh - 102px);
+  max-width: 1324px;
+  margin: 0 auto;
+  width: 100%;
+}
+.lsf-head {
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.lsf-common {
+  font-weight: 600;
+}
+.lsf-common .form-control {
+  background: #ffffff;
+  border-radius: 10px;
+  border: none;
+  padding: 13px 12px 13px 20px;
+  height: unset;
+  font-weight: 600;
+  color: rgb(0, 0, 0, 0.5);
+}
+.lsf-common .form-control:focus {
+  box-shadow: none;
+}
+.lsf-butn {
+  height: 50px;
+  width: 100%;
+  background-color: #01b0b3;
+  color: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 42px;
+  border-color: #01b0b3;
+  font-weight: 600;
+}
+.lsf-butn:hover,
+.lsf-butn:active,
+.lsf-butn:focus,
+.lsf-butn:active:focus {
+  background-color: #01b0b3 !important;
+  border-color: #01b0b3 !important;
+  box-shadow: none;
+}
+.lsf-butn:not(:disabled):not(.disabled).active:focus,
+.lsf-butn:not(:disabled):not(.disabled):active:focus,
+.show > .lsf-butn.dropdown-toggle:focus .forget-pass {
+  box-shadow: none;
+}
+
+.forget-pass,
+.forget-pass:hover {
+  color: #01b0b3;
+}
+.rem-for {
+  font-size: 14px;
+}
+.lsf-contaner {
+  width: 80%;
+  margin: auto;
+}
+.page-img {
+  max-width: 100%;
+  max-height: 505px;
+}
+@media screen and (max-width: 991px) {
+  .custm-container {
+    background-image: linear-gradient(to right, #f5f5f5 75%, #ffffff 25%);
+  }
+  .mainDP-container {
+    width: 50%;
+  }
+  .form-container {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .custm-container {
+    background-image: unset;
+    background-color: #f5f5f5;
+  }
+  .lsf-form {
+    height: unset;
+    flex-direction: column-reverse;
+  }
+  .mainDP-container {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .form-container {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .page-img {
+    width: 70%;
+  }
+  .lsf-butn {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 575px) {
+  .page-img {
+    width: 80%;
+  }
+  .lsf-butn {
+    width: 100%;
+  }
+}
+

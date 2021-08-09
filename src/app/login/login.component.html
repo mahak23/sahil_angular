@@ -1,0 +1,61 @@
+<section class="custm-container">
+    <header>
+        <a href="#"><img class="ml-3" src="assets/Images/logoNew.png" alt="Logo" /></a>
+    </header>
+
+    <div class="d-flex lsf-form">
+        <div class="d-flex form-container">
+            <div class="lsf-contaner">
+                <h3 class="lsf-head">
+                    Sign in <br />
+                    to your account
+                </h3>
+                <form class="lsf-common" [formGroup]="loginForm" (ngSubmit)="onSignIn()">
+                    <div class="form-group mb-4">
+
+                        <input type="email" class="form-control" formControlName="email" placeholder="Email Id"
+                            [class.is-invalid]="
+          loginForm.get('email')?.invalid && loginForm.get('email')?.touched
+        " />
+                        <small class="text-danger custom-row" *ngIf="
+                                (loginForm.controls['email']?.invalid &&
+                                  loginForm.get('email')?.touched)
+                              ">Please check email!</small>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Password" formControlName="password"
+                            [class.is-invalid]="
+          loginForm.get('password')?.invalid && loginForm.get('password')?.touched
+        " />
+                        <small class="text-danger" *ngIf="
+                (loginForm.controls['password']?.invalid &&
+                  loginForm.get('password')?.touched) 
+              ">Please check password</small>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                            <label class="form-check-label rem-for" for="exampleCheck1">Remember</label>
+                        </div>
+                        <a class="forget-pass rem-for mb-3" routerLink="/forgotPassword">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary lsf-butn">
+                        Sign in
+                    </button>
+                    <div>
+                        Don’t have an account?
+                        <a class="forget-pass" routerLink="/signUp">Sign up</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="
+            d-flex
+            align-items-center
+            justify-content-center
+            mainDP-container
+          ">
+            <img class="page-img" src="assets/Images/NewMainPage.png" alt="Main Page" />
+        </div>
+    </div>
+</section>

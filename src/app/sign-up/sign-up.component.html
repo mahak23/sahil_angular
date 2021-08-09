@@ -1,0 +1,67 @@
+<section class="custm-container">
+    <header>
+        <a href="#"><img class="ml-3" src="assets/Images/logoNew.png" alt="Logo" /></a>
+    </header>
+
+    <div class="d-flex lsf-form">
+        <div class="d-flex form-container">
+            <div class="lsf-contaner">
+                <h3 class="lsf-head">
+                    Sign up to<br />
+                    create your account
+                </h3>
+                <form class="lsf-common" [formGroup]="signUpForm" (ngSubmit)="onSignUp()">
+                    <div class="form-group">
+                        <input type="text" class="form-control" formControlName="name" placeholder="Full Name"
+                            [class.is-invalid]="
+          signUpForm.get('name')?.invalid && signUpForm.get('name')?.touched
+        " />
+                        <small class="text-danger custom-row" *ngIf="
+                                (signUpForm.controls['name']?.invalid &&
+                                  signUpForm.get('name')?.touched)
+                              ">Please check name field!</small>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" formControlName="email" placeholder="Email Id"
+                            [class.is-invalid]="
+          signUpForm.get('email')?.invalid && signUpForm.get('email')?.touched
+        " />
+                        <small class="text-danger custom-row" *ngIf="
+                                (signUpForm.controls['email']?.invalid &&
+                                  signUpForm.get('email')?.touched)
+                              ">Please check email!</small>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Password" formControlName="password"
+                            [class.is-invalid]="
+          signUpForm.get('password')?.invalid && signUpForm.get('password')?.touched
+        " />
+                        <small class="text-danger" *ngIf="
+                (signUpForm.controls['password']?.invalid &&
+                  signUpForm.get('password')?.touched) 
+              ">Please check password</small>
+                    </div>
+                    <div class="form-group mb-4">
+                        <input type="password" class="form-control" placeholder="Confirm Password" />
+                    </div>
+
+                    <button type="submit" class="btn btn-primary lsf-butn">
+                        Sign up
+                    </button>
+                    <div>
+                        Already have an account?
+                        <a class="forget-pass" routerLink="/"> Sign in</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="
+            d-flex
+            align-items-center
+            justify-content-center
+            mainDP-container
+          ">
+            <img class="page-img" src="assets/Images/NewMainPage.png" alt="Main Page" />
+        </div>
+    </div>
+</section>
